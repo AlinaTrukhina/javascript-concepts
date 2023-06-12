@@ -24,20 +24,18 @@ function bouncingBall(h,  bounce,  window) {
     
     if (h<=window || h<0 || bounce<0 || bounce>=1) {
       return -1;
-    } else if (h*bounce <= window) {
-       return 1;
     } else {
       let number = -1;
       let newHeight = h;
       while (newHeight >= window) {
         number += 2;
         newHeight = bounce*newHeight;
-        console.log(newHeight, number);
+        // console.log(newHeight, number);
       }
       return number;
     }
 }
 
-// console.log(bouncingBall(30,  0.66,  1.5));
-// console.log(bouncingBall(3,  0.66,  1.5));
+console.log(bouncingBall(30,  0.66,  1.5));
+console.log(bouncingBall(3,  0.66,  1.5));
 console.log(bouncingBall(2,  0,  1.5));
